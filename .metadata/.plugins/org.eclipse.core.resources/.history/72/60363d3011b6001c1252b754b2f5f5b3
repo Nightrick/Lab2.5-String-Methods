@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class StringandMethods {
+
+	public static void main(String[] args) {
+		
+		Scanner scnr = new Scanner(System.in);
+		
+		System.out.print("Hello there! Please input your favorite word!: ");
+		String word = scnr.next();
+		System.out.println("Look at this! I've perfected the capitalization of your word!: " + capitalize(word));
+		System.out.println("Don't worry! The fun is just beginning!");
+		
+		scnr.nextLine();
+		
+		System.out.print("Ok, now enter a sentence with the word Waldo in it: ");
+		String phrase = scnr.nextLine();
+		System.out.println("Guess what I know? The index where Waldo first appeared is " + wheresWaldo(phrase) + "!");
+		
+	}
+	
+	public static String capitalize(String word) {
+		
+		word = word.toLowerCase();
+		word = word.substring(0, 1).toUpperCase() + word.substring(1);
+		
+		return word;
+		
+	}
+	
+	public static int wheresWaldo(String phrase) {
+		
+		int waldoIndex = phrase.indexOf("Waldo");
+		
+		return waldoIndex;
+	}
+	
+	
+
+}

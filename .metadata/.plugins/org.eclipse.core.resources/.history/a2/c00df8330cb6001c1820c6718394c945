@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class StringandMethods {
+
+	public static void main(String[] args) {
+		
+		Scanner scnr = new Scanner(System.in);
+		
+		System.out.print("Hello there! Please input your favorite word!: ");
+		String word = scnr.next();
+		System.out.println("Look at this! I've perfected the capitalization of your word!: " + capitalize(word));
+		
+	}
+	
+	public static String capitalize(String word) {
+		
+		word.toLowerCase();
+		word.substring(0).toUpperCase();
+		
+		return word;
+		
+	}
+	
+	
+
+}
